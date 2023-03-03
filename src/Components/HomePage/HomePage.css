@@ -1,0 +1,12 @@
+.HomePage{
+    background: rgb(238, 232, 232);
+}
+
+.HomePage_container {
+  display: grid;
+  justify-content: space-evenly;
+  align-items: start;
+  gap: 4rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}

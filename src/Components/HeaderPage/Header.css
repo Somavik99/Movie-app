@@ -1,0 +1,48 @@
+.moviePosters {
+  background: rgb(238, 232, 232);
+}
+
+.HomePoster_Image {
+  height: 800px;
+  width: 100%;
+}
+
+.HomePoster_Image > img {
+  margin: auto;
+  display: block;
+  width: 100%;
+}
+
+.HomePoster_overlay {
+  position: absolute;
+  padding: 5rem;
+  bottom: 0%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-image: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 1));
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.HomePoster_overlay:hover {
+  opacity: 0.8;
+}
+
+.HomePoster_Title {
+  font-weight: 900;
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.HomePoster_loadtime {
+  font-size: 2rem;
+  margin-bottom: 1.3rem;
+}
+
+.HomePoster_Rating {
+  margin-left: 3rem;
+}
