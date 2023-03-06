@@ -80,4 +80,4 @@ const CardView = ({ image, title, detail, rating, release, vote }) => {
 };
 
 export default CardView;
-=======
+
