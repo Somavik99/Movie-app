@@ -1,8 +1,10 @@
 import React from 'react'
 
-const HomePageSearch = () => {
+const HomePageSearch = ({HomePageState}) => {
   return (
-    <div>HomePageSearch</div>
+    <div>
+      <input style={{margin:"10px", border:"2px solid light-red"}}/>
+    </div>
   )
 }
 
