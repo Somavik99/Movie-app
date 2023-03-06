@@ -25,7 +25,7 @@ const HomePage = () => {
   return (
     <div className="HomePage">
       <>
-      <HomePageSearch />
+      <HomePageSearch HomePageState={HomePageState} />
         <div className="HomePage_container">
           <>
             {HomePageState.map((val, index) => {

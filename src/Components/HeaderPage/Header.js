@@ -19,7 +19,7 @@ const Header = () => {
       .catch((err) => {
         console.log(err);
       });
-    };
+  };
   useEffect(() => {
     myHeader();
   }, []);
@@ -33,7 +33,7 @@ const Header = () => {
           background: "rgb(238, 232, 232)",
         }}
       >
-       NETWATCH
+        NET  WATCH
       </div>
       <div className="moviePosters">
         <div>
