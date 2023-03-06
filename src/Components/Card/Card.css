@@ -1,0 +1,30 @@
+.Card {
+  margin-top: 15px;
+  margin-left: 100px;
+  margin-bottom: 60px;
+  height: 33em;
+  width: 350px;
+background: none;
+}
+
+.Card_text {
+  margin: 10px;
+  padding: 10px;
+  font-size: smaller;
+  overflow: hidden;
+}
+
+.Card_body {
+  gap: 0;
+  /* border: 5px solid rgb(250, 246, 246); */
+}
+
+.Card_image {
+  transition: 0.5s ease-out;
+}
+
+.Card_image:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+  width: 300px;
+}
