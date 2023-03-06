@@ -3,7 +3,7 @@ import { Icon, Modal } from "semantic-ui-react";
 import { CiSearch } from "react-icons/ci";
 import { Button } from "@chakra-ui/react";
 
-const SearchModal = () => {
+const SearchModal = ({movieData}) => {
   const [open, setOpen] = React.useState(false);
   return (
     <Modal
@@ -19,7 +19,8 @@ const SearchModal = () => {
           style={{
             background: "whitesmoke",
             margin: "25px",
-            border: "1px solid darkred",
+            border: "none",
+            boxShadow:"3px 3px 3px  gray"
           }}
         >
           Search movies...
