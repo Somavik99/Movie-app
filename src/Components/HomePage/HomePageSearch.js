@@ -1,9 +1,14 @@
-import React from 'react'
 
-const HomePageSearch = () => {
+import React from "react";
+
+import SearchModal from "./SearchModal/SearchModal";
+
+const HomePageSearch = ({ HomePageState }) => {
   return (
-    <div>HomePageSearch</div>
-  )
-}
+    <div>
+      <SearchModal movieData={HomePageState} />
+    </div>
+  );
+};
 
-export default HomePageSearch
+export default HomePageSearch;
