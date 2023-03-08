@@ -11,7 +11,7 @@ const SearchModal = ({ movieData }) => {
   const keys = ["original_title", "title"];
   const search = (data) => {
     return data.filter((respsonse) =>
-      keys.some((key) => respsonse[key].toLowerCase().includes(SearchState))
+      keys.some((key) => respsonse[key].toString().includes(SearchState))
     );
   };
 
