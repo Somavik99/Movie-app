@@ -20,11 +20,13 @@
 .SearchMod_map {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-end;
   gap: 20px;
+  overflow-x: scroll;
 }
 
 .SearchMod_card {
+    
   margin: 10px;
   padding: 8px;
 }
