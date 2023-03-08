@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Icon, Card, Image, Modal } from "semantic-ui-react";
 import { CiSearch } from "react-icons/ci";
 import { Button } from "@chakra-ui/react";
+import { FaStar } from "react-icons/fa";
 
 const SearchModal = ({ movieData }) => {
   const [open, setOpen] = React.useState(false);
+  const [SearchState, setSearchState] = useState("");
+
+  const SearchChange=(e)=>{
+    return setSearchState(e.target.value)
+  }
+
   return (
     <Modal
       basic
@@ -27,31 +34,32 @@ const SearchModal = ({ movieData }) => {
         </Button>
       }
     >
+        <input value={SearchState} onChange={SearchChange} type="text" placeholder="Search..." style={{color:"black"}} />
       {movieData.map((Item, index) => {
         return (
-          <Card>
+          <Card key={index}>
             <Card.Content>
               <Image
                 floated="right"
-                size="mini"
+                size="medium"
                 src={`https://image.tmdb.org/t/p/original${
-                    Item && Item.backdrop_path
+                  Item && Item.backdrop_path
                 }`}
               />
-              <Card.Header>Steve Sanders</Card.Header>
-              <Card.Meta>Friends of Elliot</Card.Meta>
-              <Card.Description>
-                Steve wants to add you to the group{" "}
-                <strong>best friends</strong>
-              </Card.Description>
+              <Card.Header>{Item.original_title}</Card.Header>
+              <Card.Meta>
+                Rating: {Item.vote_average}
+                <FaStar />
+              </Card.Meta>
+              <Card.Description>{Item.detail}</Card.Description>
             </Card.Content>
             <Card.Content extra>
               <div className="ui two buttons">
                 <Button basic color="green">
-                  Approve
+                  Like
                 </Button>
                 <Button basic color="red">
-                  Decline
+                  Dislike
                 </Button>
               </div>
             </Card.Content>
