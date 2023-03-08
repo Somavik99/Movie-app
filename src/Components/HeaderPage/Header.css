@@ -1,4 +1,4 @@
-.Carousel{
+.Carousel {
   height: fit-content;
 }
 .moviePosters {
@@ -48,11 +48,4 @@
 
 .HomePoster_Rating {
   margin-left: 3rem;
-}
-
-
-@media screen and (max-width:800px){
-  .Carousel{
-
-  }
 }

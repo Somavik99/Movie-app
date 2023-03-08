@@ -1,4 +1,4 @@
-.SearchMod{
+.SearchMod {
   width: inherit;
 }
 
@@ -22,16 +22,41 @@
 }
 
 .SearchMod_map {
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
   /* width: inherit; */
-  overflow-x: scroll ;
+  overflow-x: scroll;
+  margin-left: 15%;
 }
 
 .SearchMod_card {
-    width: fit-content;
+  width: fit-content;
   margin: 10px;
   padding: 8px;
+}
+
+@media screen and (max-width: 1200px) {
+  .SearchMod_map {
+    margin-left: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    overflow-x: scroll;
+  }
+
+  .SearchMod_input {
+    margin-bottom: 25%;
+    height: 35px;
+    width: 240px;
+  }
+
+  .SearchMod_card {
+    width: 80px;
+    height: 250px;
+    overflow-y: scroll;
+  }
 }

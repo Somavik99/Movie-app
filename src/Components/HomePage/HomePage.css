@@ -23,6 +23,7 @@
 
 @media screen and (max-width: 1200px) {
   .HomePage_container {
+    margin-left: 21%;
     display: grid;
     justify-content: center;
     align-items: stretch;

@@ -34,7 +34,7 @@
 
 @media screen and (max-width:800px){
   .Card{
-    height: 15em;
+    height: 18em;
     width: 250px;
     overflow-y: scroll;
     margin: 5px;
