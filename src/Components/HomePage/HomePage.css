@@ -1,6 +1,5 @@
-
-.HomePage{
-    background: rgb(184, 207, 202);
+.HomePage {
+  background: rgb(235, 240, 239);
 }
 
 .HomePage_container {
@@ -10,4 +9,13 @@
   gap: 4rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
+}
+
+@media screen and (max-width:1200px){
+  .HomePage_container{
+    display: grid;
+    justify-content: center;
+    align-items:stretch;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

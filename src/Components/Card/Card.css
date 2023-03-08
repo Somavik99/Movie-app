@@ -1,11 +1,11 @@
-
 .Card {
   margin-top: 15px;
   margin-left: 60px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   height: 33em;
   width: 350px;
-background: none;
+  background: none;
+  border: 1px solid black;
 }
 
 .Card_text {
@@ -28,4 +28,14 @@ background: none;
   transform: scale(1.5);
   cursor: pointer;
   width: 300px;
+}
+
+@media screen and (max-width:800px){
+  .Card{
+    height: 15em;
+    width: 250px;
+    overflow-y: scroll;
+    margin: 5px;
+    padding: 5px;
+  }
 }
