@@ -1,5 +1,15 @@
 .HomePage {
-  background: rgb(235, 240, 239);
+  /* background: rgb(235, 240, 239); */
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    21deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 6%,
+    rgba(255, 255, 255, 1) 17%,
+    rgba(255, 250, 250, 1) 22%,
+    rgba(246, 244, 244, 1) 45%,
+    rgba(247, 98, 98, 1) 96%
+  );
 }
 
 .HomePage_container {
@@ -11,11 +21,11 @@
   grid-template-rows: repeat(3, 1fr);
 }
 
-@media screen and (max-width:1200px){
-  .HomePage_container{
+@media screen and (max-width: 1200px) {
+  .HomePage_container {
     display: grid;
     justify-content: center;
-    align-items:stretch;
+    align-items: stretch;
     grid-template-columns: repeat(1, 1fr);
   }
 }
