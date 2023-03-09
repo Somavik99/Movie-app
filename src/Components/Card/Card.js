@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
   Card,
@@ -21,7 +20,16 @@ import ModalPage from "../Modal/ModalPage";
 
 const CardView = ({ image, title, detail, rating, release, vote }) => {
   return (
-    <Card maxW="sm" className="Card">
+    <Card
+      maxW="sm"
+      style={{
+        background: "#ffefba",
+        background: "-webkit-linear-gradient(to right, #ffefba, #ffffff)",
+        background: "linear-gradient(to right, #ffefba, #ffffff)",
+      }}
+      textColor="black"
+      className="Card"
+    >
       <CardHeader>
         <Flex spacing="4">
           <Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">
@@ -80,4 +88,3 @@ const CardView = ({ image, title, detail, rating, release, vote }) => {
 };
 
 export default CardView;
-
