@@ -34,7 +34,15 @@ const CommentModal = () => {
           <ModalCloseButton />
           <ModalBody></ModalBody>
           <ModalBody>
-            <textarea rows={4} style={{ height: "100px", width: "15em",marginLeft:"15%" }} />
+            <textarea
+              rows={4}
+              style={{
+                height: "100px",
+                width: "15em",
+                marginLeft: "15%",
+                marginTop: "25%",
+              }}
+            />
           </ModalBody>
           <ModalFooter>
             <Button colorScheme="blue" mr={3} onClick={onClose}>
