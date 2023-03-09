@@ -6,6 +6,9 @@
   width: 350px;
   background: none;
   border: 1px solid black;
+  background: #ffefba;
+  background: -webkit-linear-gradient(to right, #ffefba, #ffffff);
+  background: linear-gradient(to right, #ffefba, #ffffff);
 }
 
 .Card_text {

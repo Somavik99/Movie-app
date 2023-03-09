@@ -24,9 +24,7 @@ const CardView = ({ image, title, detail, rating, release, vote }) => {
     <Card
       maxW="sm"
       style={{
-        background: "#ffefba",
-        background: "-webkit-linear-gradient(to right, #ffefba, #ffffff)",
-        background: "linear-gradient(to right, #ffefba, #ffffff)",
+       
       }}
       textColor="black"
       className="Card"
