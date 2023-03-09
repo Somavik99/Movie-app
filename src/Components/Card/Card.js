@@ -14,9 +14,10 @@ import {
 } from "@chakra-ui/react";
 import { FaShareAlt } from "react-icons/fa";
 import { CiBeerMugFull } from "react-icons/ci";
-import { BsChatSquareDots } from "react-icons/bs";
+
 import "./Card.css";
 import ModalPage from "../Modal/ModalPage";
+import CommentModal from "./CommentModal/CommentModal";
 
 const CardView = ({ image, title, detail, rating, release, vote }) => {
   return (
@@ -76,9 +77,7 @@ const CardView = ({ image, title, detail, rating, release, vote }) => {
           vote={vote}
         />
 
-        <Button flex="1" variant="ghost" leftIcon={<BsChatSquareDots />}>
-          Comment
-        </Button>
+        <CommentModal />
         <Button flex="1" variant="ghost" leftIcon={<FaShareAlt />}>
           Share
         </Button>

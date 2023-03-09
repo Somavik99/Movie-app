@@ -48,7 +48,7 @@ const SearchModal = ({ movieData }) => {
         value={SearchState}
         onChange={SearchChange}
         type="text"
-        placeholder="Search..."
+        placeholder="🔍Search..."
         style={{ color: "black" }}
         className="SearchMod_input"
       />

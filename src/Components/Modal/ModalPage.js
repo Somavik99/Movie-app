@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
   Modal,
@@ -8,10 +7,7 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
-  //   RadioGroup,
-  //   Stack,
   Button,
-  //   Radio,
   useDisclosure,
   Image,
 } from "@chakra-ui/react";
