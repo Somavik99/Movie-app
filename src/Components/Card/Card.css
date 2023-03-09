@@ -1,7 +1,7 @@
 .Card {
   margin-top: 15px;
   margin-left: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   height: 33em;
   width: 350px;
   background: none;
@@ -40,5 +40,6 @@
     overflow-y: scroll;
     margin: 5px;
     padding: 5px;
+    margin-bottom: 40px;
   }
 }

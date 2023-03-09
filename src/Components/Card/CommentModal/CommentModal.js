@@ -14,10 +14,7 @@ import {
 import { BsChatSquareDots } from "react-icons/bs";
 const CommentModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-const CommentSubmitHandler=()=>{
-
-}
-
+  const CommentSubmitHandler = () => {};
 
   return (
     <>
@@ -36,9 +33,9 @@ const CommentSubmitHandler=()=>{
           <ModalHeader>Modal Title</ModalHeader>
           <ModalCloseButton />
           <ModalBody></ModalBody>
-<ModalBody>
-  <textarea rows={8} style={{height:"100px", width:"15em"}} />
-</ModalBody>
+          <ModalBody>
+            <textarea rows={4} style={{ height: "100px", width: "15em",marginLeft:"15%" }} />
+          </ModalBody>
           <ModalFooter>
             <Button colorScheme="blue" mr={3} onClick={onClose}>
               Close
