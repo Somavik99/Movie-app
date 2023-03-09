@@ -42,4 +42,14 @@
     padding: 5px;
     margin-bottom: 40px;
   }
+
+  .Card_image {
+    transition: 0.5s ease-out;
+  }
+
+  .Card_image:hover {
+    transform: scale(1.5);
+    width: 250px;
+    z-index: 2;
+  }
 }
