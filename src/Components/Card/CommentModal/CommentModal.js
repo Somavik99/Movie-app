@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CommentModal.css";
 import {
   Modal,
@@ -13,8 +13,14 @@ import {
 } from "@chakra-ui/react";
 import { BsChatSquareDots } from "react-icons/bs";
 const CommentModal = () => {
+  const [TextState, setTextState] = useState([""]);
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const CommentSubmitHandler = () => {};
+  const handleChange = (e) => {
+    return setTextState(e.target.value);
+  };
+  const CommentSubmitHandler = (text) => {
+    return setTextState(text);
+  };
 
   return (
     <>
@@ -32,7 +38,9 @@ const CommentModal = () => {
         <ModalContent>
           <ModalHeader>Modal Title</ModalHeader>
           <ModalCloseButton />
-          <ModalBody></ModalBody>
+          <ModalBody>
+            {CommentSubmitHandler ? <div>{TextState}</div> : "  "}
+          </ModalBody>
           <ModalBody>
             <textarea
               rows={4}
@@ -42,6 +50,7 @@ const CommentModal = () => {
                 marginLeft: "15%",
                 marginTop: "25%",
               }}
+              onChange={handleChange}
             />
           </ModalBody>
           <ModalFooter>
