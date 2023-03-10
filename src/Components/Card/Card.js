@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Card,
   CardHeader,
@@ -18,8 +18,10 @@ import { CiBeerMugFull } from "react-icons/ci";
 import "./Card.css";
 import ModalPage from "../Modal/ModalPage";
 import CommentModal from "./CommentModal/CommentModal";
+import ShareModal from "./ShareModal/ShareModal";
 
 const CardView = ({ image, title, detail, rating, release, vote }) => {
+  const [OpenShareModal, setOpenShareModal] = useState(false);
   return (
     <Card maxW="sm" style={{}} textColor="black" className="Card">
       <CardHeader>
@@ -69,9 +71,17 @@ const CardView = ({ image, title, detail, rating, release, vote }) => {
         />
 
         <CommentModal title={title} image={image} />
-        <Button flex="1" variant="ghost" leftIcon={<FaShareAlt />}>
+        <Button
+          flex="1"
+          variant="ghost"
+          leftIcon={<FaShareAlt />}
+          onClick={() => {
+            setOpenShareModal(true);
+          }}
+        >
           Share
         </Button>
+        {OpenShareModal && <ShareModal setOpenShareModal={setOpenShareModal} />}
       </CardFooter>
     </Card>
   );
