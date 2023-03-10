@@ -21,14 +21,7 @@ import CommentModal from "./CommentModal/CommentModal";
 
 const CardView = ({ image, title, detail, rating, release, vote }) => {
   return (
-    <Card
-      maxW="sm"
-      style={{
-       
-      }}
-      textColor="black"
-      className="Card"
-    >
+    <Card maxW="sm" style={{}} textColor="black" className="Card">
       <CardHeader>
         <Flex spacing="4">
           <Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">
@@ -75,7 +68,7 @@ const CardView = ({ image, title, detail, rating, release, vote }) => {
           vote={vote}
         />
 
-        <CommentModal title={title} />
+        <CommentModal title={title} image={image} />
         <Button flex="1" variant="ghost" leftIcon={<FaShareAlt />}>
           Share
         </Button>
