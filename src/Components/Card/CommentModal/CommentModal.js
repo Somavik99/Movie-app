@@ -50,7 +50,9 @@ const CommentModal = ({ title }) => {
               {ClickState.map((oldItems, index) => {
                 return (
                   <>
-                    <ModalBody key={index}>{oldItems}</ModalBody>
+                    <p key={index} style={{ marginLeft: "13%",border:"1px solid black" }}>
+                      👍{oldItems}
+                    </p>
                   </>
                 );
               })}
@@ -72,14 +74,15 @@ const CommentModal = ({ title }) => {
               }}
               onChange={handleChange}
               value={TextState}
+              className="textArea"
             />
           </ModalBody>
           <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Close
-            </Button>
             <Button variant="ghost" onClick={CommentSubmitHandler}>
               Submit
+            </Button>
+            <Button colorScheme="blue" mr={3} onClick={onClose}>
+              Close
             </Button>
           </ModalFooter>
         </ModalContent>

@@ -1,0 +1,7 @@
+.textArea{
+    padding: 5px;
+    /* border: 1px solid lightgreen; */
+    outline: none;
+    border-radius: 8px ;
+    box-shadow: 2px 2px 2px 2px slategray;
+}
