@@ -75,7 +75,7 @@ const CardView = ({ image, title, detail, rating, release, vote }) => {
           vote={vote}
         />
 
-        <CommentModal />
+        <CommentModal title={title} />
         <Button flex="1" variant="ghost" leftIcon={<FaShareAlt />}>
           Share
         </Button>

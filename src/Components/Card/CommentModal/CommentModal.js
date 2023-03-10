@@ -12,14 +12,19 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { BsChatSquareDots } from "react-icons/bs";
-const CommentModal = () => {
-  const [TextState, setTextState] = useState([""]);
+const CommentModal = ({ title }) => {
+  const [TextState, setTextState] = useState("");
+  const [ClickState, setClickState] = useState([]);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const handleChange = (e) => {
     return setTextState(e.target.value);
   };
-  const CommentSubmitHandler = (text) => {
-    return setTextState(text);
+  const CommentSubmitHandler = () => {
+    setClickState((text) => {
+      return [...text, TextState];
+    });
+    setTextState("");
+    console.log("text entered");
   };
 
   return (
@@ -35,12 +40,27 @@ const CommentModal = () => {
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
+
         <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
+          <ModalHeader>
+            <p>{title}</p>
+          </ModalHeader>
+          {ClickState ? (
+            <>
+              {ClickState.map((oldItems, index) => {
+                return (
+                  <>
+                    <ModalBody key={index}>{oldItems}</ModalBody>
+                  </>
+                );
+              })}
+            </>
+          ) : (
+            <p style={{ fontSize: "20px" }} font="bold">
+              Leave a comment if u have watched the movie
+            </p>
+          )}
           <ModalCloseButton />
-          <ModalBody>
-            {CommentSubmitHandler ? <div>{TextState}</div> : "  "}
-          </ModalBody>
           <ModalBody>
             <textarea
               rows={4}
@@ -51,6 +71,7 @@ const CommentModal = () => {
                 marginTop: "25%",
               }}
               onChange={handleChange}
+              value={TextState}
             />
           </ModalBody>
           <ModalFooter>
