@@ -30,3 +30,11 @@
   transform: scale(1);
   box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.321);
 }
+
+.ModalClose_btn{
+  background: transparent;
+  position:relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items:  baseline;
+}

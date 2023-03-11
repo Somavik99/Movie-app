@@ -1,23 +1,26 @@
 import React from "react";
-import { Button } from "semantic-ui-react";
+
 import "./ShareModal.css";
 
 const ShareModal = ({ setOpenShareModal }) => {
   return (
     <div className="overlay">
       <div className="ModalContainer">
-        <div className="ModalHead">Share The Movie</div>
-        <div className="ModalBody"></div>
-        <div className="ModalFooter">
-          <Button
+        <h1 className="ModalHead" style={{ fontSize: "20px" }}>
+          Share The Movie
+        </h1>
+        <div className="ModalBody">
+          <></>
+          <button
             onClick={() => {
               setOpenShareModal(false);
             }}
             className="ModalClose_btn"
           >
             X
-          </Button>
+          </button>
         </div>
+        <div className="ModalFooter"></div>
       </div>
     </div>
   );
