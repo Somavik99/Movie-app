@@ -81,7 +81,7 @@ const CardView = ({ image, title, detail, rating, release, vote }) => {
         >
           Share
         </Button>
-        {OpenShareModal && <ShareModal setOpenShareModal={setOpenShareModal} />}
+        {OpenShareModal && <ShareModal setOpenShareModal={setOpenShareModal} title={title} />}
       </CardFooter>
     </Card>
   );
