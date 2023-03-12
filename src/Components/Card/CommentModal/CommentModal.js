@@ -12,6 +12,8 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { BsChatSquareDots } from "react-icons/bs";
+import { CgProfile } from "react-icons/cg";
+import { AiOutlineSend } from "react-icons/ai";
 const CommentModal = ({ title }) => {
   const [TextState, setTextState] = useState("");
   const [ClickState, setClickState] = useState([]);
@@ -49,11 +51,33 @@ const CommentModal = ({ title }) => {
             <>
               {ClickState.map((oldItems, index) => {
                 return (
-                  <>
-                    <p key={index} style={{ marginLeft: "13%",border:"1px solid black" }}>
-                      👍{oldItems}
+                  <span>
+                    <p
+                      key={index}
+                      style={{
+                        background: "white",
+                        margin: "14px",
+                        marginLeft: "15%",
+                        border: "1px solid black",
+                        width: "fit-content ",
+                        padding: "5px",
+                        display: "flex",
+                        alignItems: "flex-start",
+                        fontSize: "20px",
+                        border: "1px solid gray",
+                        borderRadius: "18px",
+                        boxShadow: "2px 2px 2px gray",
+                        padding: "5px",
+                        gap: "4px",
+                        position: "relative",
+                      }}
+                    >
+                      <CgProfile
+                        style={{ marginTop: "2px", fontSize: "25px" }}
+                      />
+                      {oldItems}
                     </p>
-                  </>
+                  </span>
                 );
               })}
             </>
@@ -64,13 +88,14 @@ const CommentModal = ({ title }) => {
           )}
           <ModalCloseButton />
           <ModalBody>
+            <Button variant="ghost" onClick={CommentSubmitHandler}>
+              <AiOutlineSend />
+            </Button>
             <textarea
               rows={4}
               style={{
-                height: "100px",
-                width: "15em",
-                marginLeft: "15%",
-                marginTop: "25%",
+                marginLeft: "13%",
+                marginTop: "9%",
               }}
               onChange={handleChange}
               value={TextState}
@@ -78,9 +103,6 @@ const CommentModal = ({ title }) => {
             />
           </ModalBody>
           <ModalFooter>
-            <Button variant="ghost" onClick={CommentSubmitHandler}>
-              Submit
-            </Button>
             <Button colorScheme="blue" mr={3} onClick={onClose}>
               Close
             </Button>

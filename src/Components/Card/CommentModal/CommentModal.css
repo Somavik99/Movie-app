@@ -1,7 +1,18 @@
-.textArea{
-    padding: 5px;
-    /* border: 1px solid lightgreen; */
-    outline: none;
-    border-radius: 8px ;
-    box-shadow: 2px 2px 2px 2px slategray;
+.textArea {
+  height: 100px;
+  width: 15em;
+  padding: 12px;
+  /* border: 1px solid lightgreen; */
+  outline: none;
+  /* border: 1px solid rgb(64, 64, 64); */
+  border-radius: 8px ;
+  box-shadow: 2px 2px 2px 2px slategray;
+  transition:  0.5s ease-out;
+}
+
+.textArea:hover {
+  transform: scale(1);
+
+  box-shadow: 5px 5px 5px 5px rgba(112, 128, 144, 0.517);
+  border: 1px solid rgb(138, 255, 159);
 }

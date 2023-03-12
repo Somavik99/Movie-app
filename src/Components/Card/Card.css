@@ -37,6 +37,7 @@
   .Card {
     height: 18em;
     width: 250px;
+    padding: 15px;
     overflow-y: scroll;
     margin: 5px;
     padding: 5px;
