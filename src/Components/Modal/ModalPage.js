@@ -37,7 +37,7 @@ const ModalPage = ({ image, title, rating, detail, release, vote }) => {
         onClick={onOpen}
         leftIcon={<GrOverview />}
       >
-        View
+        View Detail
       </Button>
 
       <Modal
