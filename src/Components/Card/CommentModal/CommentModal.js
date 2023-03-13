@@ -100,6 +100,7 @@ const CommentModal = ({ title }) => {
               onChange={handleChange}
               value={TextState}
               className="textArea"
+              placeholder="Leave a comment"
             />
           </ModalBody>
           <ModalFooter>

@@ -3,6 +3,7 @@ import React from "react";
 import "./ShareModal.css";
 
 const ShareModal = ({ setOpenShareModal, title }) => {
+  const url = ` https://www.movie.share.com/${title}`;
   return (
     <div className="overlay">
       <div className="ModalContainer">
